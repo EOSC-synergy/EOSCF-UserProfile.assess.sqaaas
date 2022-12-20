@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/athenarc/EOSCF-UserProfile:
+      branch: master
+      repo: https://github.com/athenarc/EOSCF-UserProfile
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-coral-quail.sh
+        container: qc.acc_flimsy-purple-tamarin
+  QC.Doc:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-seashell-avocet.sh
+        container: qc.doc_skinny-aquamarine-donkey
+      github.com/athenarc/EOSCF-UserProfile git:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-rose-caterpillar.sh
+        container: qc.doc_thirsty-xanthic-coral
+      github.com/athenarc/EOSCF-UserProfile markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-turquoise-caiman.sh
+        container: qc.doc_woozy-puce-coati
+  QC.Lic:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-burgundy-dalmatian.sh
+        container: qc.lic_sleazy-saffron-whippet
+  QC.Sec:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-mustard-raccoon.sh
+        container: qc.sec_surly-pear-pig
+  QC.Sty:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-goldenrod-owl.sh
+        container: qc.sty_woozy-plum-millipede
+      github.com/athenarc/EOSCF-UserProfile hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-silver-mist.sh
+        container: qc.sty_cheeky-scarlet-fish
+  QC.Ver:
+    repos:
+      github.com/athenarc/EOSCF-UserProfile get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-razzmatazz-markhor.sh
+        container: qc.ver_ugly-purple-indri
+timeout: 5400

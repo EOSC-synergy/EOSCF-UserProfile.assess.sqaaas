@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/athenarc/EOSCF-UserProfile git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-crimson-millipede.sh
-        container: qc.acc_woolly-firebrick-seal
+        - /usr/bin/env sh .sqa/script.flimsy-brass-quokka.sh
+        container: qc.acc_gummy-chartreuse-chinchilla
   QC.Doc:
     repos:
       github.com/athenarc/EOSCF-UserProfile find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-aqua-labradoodle.sh
-        container: qc.doc_leaky-periwinkle-hornet
+        - /usr/bin/env sh .sqa/script.messy-saffron-ragdoll.sh
+        container: qc.doc_flabby-teal-ladybird
       github.com/athenarc/EOSCF-UserProfile git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-lavender-fish.sh
-        container: qc.doc_squeaky-mustard-cheetah
+        - /usr/bin/env sh .sqa/script.stinky-cobalt-eagle.sh
+        container: qc.doc_lanky-ecru-octopus
       github.com/athenarc/EOSCF-UserProfile markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-pear-guppy.sh
-        container: qc.doc_stinky-lime-bullfrog
+        - /usr/bin/env sh .sqa/script.smelly-wisteria-bison.sh
+        container: qc.doc_crappy-puce-collie
   QC.Lic:
     repos:
       github.com/athenarc/EOSCF-UserProfile licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-puce-angelfish.sh
-        container: qc.lic_sunny-chestnut-badger
+        - /usr/bin/env sh .sqa/script.tasty-malachite-macaque.sh
+        container: qc.lic_whiny-platinum-bobcat
   QC.Sec:
     repos:
       github.com/athenarc/EOSCF-UserProfile bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-sepia-hare.sh
-        container: qc.sec_flimsy-ultramarine-mist
+        - /usr/bin/env sh .sqa/script.muggy-wisteria-tapir.sh
+        container: qc.sec_blurry-eggplant-chameleon
   QC.Sty:
     repos:
       github.com/athenarc/EOSCF-UserProfile flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-cream-cat.sh
-        container: qc.sty_squirrely-magnolia-crane
+        - /usr/bin/env sh .sqa/script.flimsy-charcoal-tuatara.sh
+        container: qc.sty_ready-white-bat
       github.com/athenarc/EOSCF-UserProfile hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-mustard-dugong.sh
-        container: qc.sty_craggy-malachite-termite
+        - /usr/bin/env sh .sqa/script.skimpy-tangerine-penguin.sh
+        container: qc.sty_skinny-taupe-stingray
   QC.Ver:
     repos:
       github.com/athenarc/EOSCF-UserProfile get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-seashell-spaniel.sh
-        container: qc.ver_flabby-emerald-wolf
+        - /usr/bin/env sh .sqa/script.gimpy-silver-lemur.sh
+        container: qc.ver_freaky-azure-wolverine
 timeout: 5400
